@@ -1,0 +1,10 @@
+[user]
+	name = vincentminghan26@gmail.com
+	email = vincentminghan26@gmail.com
+
+[init]
+	defaultBranch = main
+
+[includeIf "gitdir:~/Work/"]
+	path = ~/Work/.gitconfig
+
