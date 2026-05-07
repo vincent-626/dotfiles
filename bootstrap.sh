@@ -4,6 +4,15 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin main;
 
+function registerJdks() {
+	if ! command -v jenv &> /dev/null; then
+		return;
+	fi;
+	for jdk in /Library/Java/JavaVirtualMachines/*/Contents/Home; do
+		jenv add "$jdk" 2>/dev/null;
+	done;
+}
+
 function installOhMyZsh() {
 	if [ ! -d "$HOME/.oh-my-zsh" ]; then
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended;
@@ -21,6 +30,7 @@ function installOhMyZsh() {
 }
 
 function doIt() {
+	registerJdks;
 	installOhMyZsh;
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
