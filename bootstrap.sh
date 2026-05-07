@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "$0")";
 
 git pull origin main;
 
@@ -47,11 +47,7 @@ function doIt() {
 		--exclude "install.sh" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	if [ -n "$ZSH_VERSION" ]; then
-		source ~/.zshrc;
-	elif [ -n "$BASH_VERSION" ]; then
-		source ~/.bash_profile;
-	fi;
+	source ~/.zshrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
