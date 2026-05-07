@@ -58,6 +58,9 @@ brew install zopfli
 # Node version manager
 brew install nvm
 
+# Go
+brew install go
+
 # pnpm
 brew install pnpm
 
