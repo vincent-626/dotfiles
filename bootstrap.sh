@@ -44,6 +44,15 @@ function installVSCodeExtensions() {
 	done;
 }
 
+function installNode() {
+	local nvm_sh="$(brew --prefix)/opt/nvm/nvm.sh"
+	[ ! -f "$nvm_sh" ] && return;
+	export NVM_DIR="$HOME/.nvm"
+	\. "$nvm_sh"
+	nvm install --lts;
+	nvm alias default node;
+}
+
 function installClaudeCode() {
 	if command -v npm &> /dev/null; then
 		npm install -g @anthropic-ai/claude-code;
@@ -83,6 +92,7 @@ function installOhMyZsh() {
 
 function doIt() {
 	mkdir -p "$HOME/Work";
+	installNode;
 	installVSCodeExtensions;
 	installClaudeCode;
 	setupFzf;
