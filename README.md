@@ -10,10 +10,10 @@ Personal macOS dotfiles and machine setup.
 ssh-keygen -t ed25519 -C "vincentminghan26@gmail.com"
 ```
 
-Copy the public key:
+Copy the public key to your clipboard:
 
 ```sh
-cat ~/.ssh/id_ed25519.pub
+pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 Then add it to GitHub at [github.com/settings/keys](https://github.com/settings/keys).
