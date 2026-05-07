@@ -4,6 +4,12 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin main;
 
+function setupFzf() {
+	if command -v fzf &> /dev/null; then
+		"$(brew --prefix)/opt/fzf/install" --all --no-update-rc 2>/dev/null;
+	fi;
+}
+
 function registerJdks() {
 	if ! command -v jenv &> /dev/null; then
 		return;
@@ -30,6 +36,7 @@ function installOhMyZsh() {
 }
 
 function doIt() {
+	setupFzf;
 	registerJdks;
 	installOhMyZsh;
 	rsync --exclude ".git/" \

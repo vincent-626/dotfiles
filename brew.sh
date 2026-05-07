@@ -69,5 +69,32 @@ brew install go
 # pnpm
 brew install pnpm
 
+# CLI utilities
+brew install fzf
+brew install ripgrep
+brew install bat
+brew install jq
+brew install gh
+brew install htop
+brew install git-delta
+
+# Python version manager
+brew install pyenv
+
+# Containers & cloud
+brew install --cask docker
+brew install kubectl
+brew install awscli
+brew install terraform
+
+# Apps
+brew install --cask visual-studio-code
+brew install --cask iterm2
+brew install --cask google-chrome
+brew install --cask brave-browser
+
+# Fonts
+brew install --cask font-hack-nerd-font
+
 # Remove outdated versions from the cellar.
 brew cleanup
