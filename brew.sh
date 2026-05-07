@@ -69,6 +69,9 @@ brew install go
 # pnpm
 brew install pnpm
 
+# Terminal multiplexer
+brew install tmux
+
 # CLI utilities
 brew install fzf
 brew install ripgrep
