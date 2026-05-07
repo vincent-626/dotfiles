@@ -88,6 +88,7 @@ brew install awscli
 brew install terraform
 
 # Apps
+brew install --cask jetbrains-toolbox
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask google-chrome
