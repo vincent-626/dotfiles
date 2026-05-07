@@ -29,3 +29,7 @@ bash brew.sh
 # Sync dotfiles and configure shell
 echo "Setting up dotfiles..."
 bash bootstrap.sh --force
+
+# Apply macOS settings
+echo "Applying macOS settings..."
+bash macos.sh
