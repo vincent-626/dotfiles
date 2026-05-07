@@ -82,6 +82,7 @@ function installOhMyZsh() {
 }
 
 function doIt() {
+	mkdir -p "$HOME/Work";
 	installVSCodeExtensions;
 	installClaudeCode;
 	setupFzf;
