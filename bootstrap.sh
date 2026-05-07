@@ -4,6 +4,44 @@ cd "$(dirname "$0")";
 
 git pull origin main;
 
+function installVSCodeExtensions() {
+	if ! command -v code &> /dev/null; then
+		return;
+	fi;
+	extensions=(
+		# Git
+		eamodio.gitlens
+		github.vscode-pull-request-github
+		github.vscode-github-actions
+		# Containers & cloud
+		ms-azuretools.vscode-docker
+		ms-vscode-remote.remote-containers
+		ms-kubernetes-tools.vscode-kubernetes-tools
+		Tim-Koehler.helm-intellisense
+		# Languages
+		golang.go
+		ms-python.python
+		ms-toolsai.jupyter
+		ms-vscode.vscode-typescript-next
+		redhat.vscode-yaml
+		ms-vscode.makefile-tools
+		# Frontend
+		bradlc.vscode-tailwindcss
+		esbenp.prettier-vscode
+		dbaeumer.vscode-eslint
+		# Markdown
+		yzhang.markdown-all-in-one
+		cyberbiont.vscode-open-in-typora
+		# UI & productivity
+		vscode-icons-team.vscode-icons
+		usernamehw.errorlens
+		streetsidesoftware.code-spell-checker
+	)
+	for ext in "${extensions[@]}"; do
+		code --install-extension "$ext" --force;
+	done;
+}
+
 function installClaudeCode() {
 	if command -v npm &> /dev/null; then
 		npm install -g @anthropic-ai/claude-code;
@@ -42,6 +80,7 @@ function installOhMyZsh() {
 }
 
 function doIt() {
+	installVSCodeExtensions;
 	installClaudeCode;
 	setupFzf;
 	registerJdks;
