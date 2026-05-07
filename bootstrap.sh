@@ -5,8 +5,10 @@ cd "$(dirname "$0")";
 git pull origin main;
 
 function installVSCodeExtensions() {
+	local code_bin="code"
 	if ! command -v code &> /dev/null; then
-		return;
+		code_bin="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+		[ ! -f "$code_bin" ] && return;
 	fi;
 	extensions=(
 		# Git
@@ -38,7 +40,7 @@ function installVSCodeExtensions() {
 		streetsidesoftware.code-spell-checker
 	)
 	for ext in "${extensions[@]}"; do
-		code --install-extension "$ext" --force;
+		"$code_bin" --install-extension "$ext" --force;
 	done;
 }
 
