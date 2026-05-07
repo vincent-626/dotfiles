@@ -78,8 +78,8 @@ brew install gh
 brew install htop
 brew install git-delta
 
-# Python version manager
-brew install pyenv
+# Python toolchain manager
+brew install uv
 
 # Containers & cloud
 brew install --cask docker
