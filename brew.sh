@@ -69,6 +69,9 @@ brew install go
 # pnpm
 brew install pnpm
 
+# Dock manager
+brew install dockutil
+
 # Terminal multiplexer
 brew install tmux
 

@@ -22,6 +22,20 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -bool false
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 defaults write com.apple.screencapture type -string "png"
 
+# Dock apps
+if command -v dockutil &> /dev/null; then
+	dockutil --remove all --no-restart
+	dockutil --add '/Applications/Brave Browser.app' --no-restart
+	dockutil --add '/Applications/Google Chrome.app' --no-restart
+	dockutil --add '/Applications/Spotify.app' --no-restart
+	dockutil --add '/Applications/Visual Studio Code.app' --no-restart
+	dockutil --add '/Applications/iTerm.app' --no-restart
+	dockutil --add '/System/Applications/Calendar.app' --no-restart
+	dockutil --add '/System/Applications/Notes.app' --no-restart
+	dockutil --add '/System/Applications/System Settings.app' --no-restart
+	dockutil --add '/Applications' --view grid --display folder --sort name --no-restart
+fi
+
 # Apply changes
 killall Dock
 killall Finder
