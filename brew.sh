@@ -55,5 +55,11 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 
+# Node version manager
+brew install nvm
+
+# pnpm
+brew install pnpm
+
 # Remove outdated versions from the cellar.
 brew cleanup
