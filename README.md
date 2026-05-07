@@ -4,13 +4,27 @@ Personal macOS dotfiles and machine setup.
 
 ## Fresh machine setup
 
-> **Before you start:** make sure your SSH key is added to GitHub, as the dotfiles repo is cloned over SSH.
+### 1. Generate an SSH key and add it to GitHub
 
-Run the one-liner below — it installs Homebrew, clones this repo, installs all packages, and syncs the dotfiles:
+```sh
+ssh-keygen -t ed25519 -C "vincentminghan26@gmail.com"
+```
+
+Copy the public key:
+
+```sh
+cat ~/.ssh/id_ed25519.pub
+```
+
+Then add it to GitHub at [github.com/settings/keys](https://github.com/settings/keys).
+
+### 2. Run the setup
 
 ```sh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/vincent-626/dotfiles/main/install.sh)"
 ```
+
+This installs Homebrew, clones this repo, installs all packages, and syncs the dotfiles.
 
 ## What gets installed
 
@@ -31,7 +45,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/vincent-626/dotfiles/mai
 - Docker Desktop, `kubectl`, `awscli`, `terraform`
 
 **Apps**
-- iTerm2, VS Code, Google Chrome, Brave
+- iTerm2, VS Code, JetBrains Toolbox, Google Chrome, Brave, Spotify, Typora, Obsidian, Claude Code
 
 **Fonts**
 - Hack Nerd Font
