@@ -4,6 +4,12 @@ cd "$(dirname "$0")";
 
 git pull origin main;
 
+function installClaudeCode() {
+	if command -v npm &> /dev/null; then
+		npm install -g @anthropic-ai/claude-code;
+	fi;
+}
+
 function setupFzf() {
 	if command -v fzf &> /dev/null; then
 		"$(brew --prefix)/opt/fzf/install" --all --no-update-rc 2>/dev/null;
@@ -36,6 +42,7 @@ function installOhMyZsh() {
 }
 
 function doIt() {
+	installClaudeCode;
 	setupFzf;
 	registerJdks;
 	installOhMyZsh;

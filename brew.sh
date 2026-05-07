@@ -93,6 +93,9 @@ brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask google-chrome
 brew install --cask brave-browser
+brew install --cask spotify
+brew install --cask typora
+brew install --cask obsidian
 
 # Fonts
 brew install --cask font-hack-nerd-font
