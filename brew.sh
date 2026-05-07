@@ -91,6 +91,10 @@ brew install awscli
 brew install terraform
 
 # Apps
+brew install --cask rectangle
+brew install --cask mos
+brew install --cask logi-options+
+brew install --cask jordanbaird-ice
 brew install --cask jetbrains-toolbox
 brew install --cask visual-studio-code
 brew install --cask iterm2
