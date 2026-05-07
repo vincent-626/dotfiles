@@ -26,6 +26,13 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/vincent-626/dotfiles/mai
 
 This installs Homebrew, clones this repo, installs all packages, and syncs the dotfiles.
 
+### 3. Set the font in iTerm2
+
+Hack Nerd Font is installed automatically, but iTerm2 needs to be pointed to it manually:
+
+1. Open iTerm2 → Settings → Profiles → Text
+2. Under **Font**, select **Hack Nerd Font Mono**
+
 ## What gets installed
 
 **Shell**
