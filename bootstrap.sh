@@ -27,6 +27,11 @@ function installVSCodeExtensions() {
 		ms-vscode.vscode-typescript-next
 		redhat.vscode-yaml
 		ms-vscode.makefile-tools
+		# Java & Spring
+		vscjava.vscode-java-pack
+		vmware.vscode-spring-boot
+		vscjava.vscode-spring-initializr
+		vscjava.vscode-spring-boot-dashboard
 		# Frontend
 		bradlc.vscode-tailwindcss
 		esbenp.prettier-vscode
