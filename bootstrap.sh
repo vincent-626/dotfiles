@@ -72,6 +72,7 @@ function registerJdks() {
 	for jdk in /Library/Java/JavaVirtualMachines/*/Contents/Home; do
 		jenv add "$jdk" 2>/dev/null;
 	done;
+	jenv global 21;
 }
 
 function installOhMyZsh() {
