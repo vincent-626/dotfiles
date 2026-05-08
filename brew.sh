@@ -57,7 +57,6 @@ brew install zopfli
 
 # Java version manager
 brew install jenv
-brew install --cask temurin@17
 brew install --cask temurin@21
 
 # Node version manager
