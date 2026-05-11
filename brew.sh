@@ -59,10 +59,6 @@ brew install zopfli
 brew install jenv
 brew install --cask temurin@21
 
-# Java build tools
-brew install maven
-brew install gradle
-
 # Node version manager
 brew install nvm
 
