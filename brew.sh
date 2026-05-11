@@ -111,8 +111,6 @@ brew install --cask spotify
 brew install --cask typora
 brew install --cask obsidian
 
-# Fonts
-brew install --cask font-hack-nerd-font
 
 # Remove outdated versions from the cellar.
 brew cleanup

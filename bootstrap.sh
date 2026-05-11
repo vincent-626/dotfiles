@@ -4,6 +4,12 @@ cd "$(dirname "$0")";
 
 git pull origin main;
 
+function setupIterm2() {
+	local prefs_dir="$(cd "$(dirname "$0")" && pwd)/iterm2"
+	defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$prefs_dir"
+	defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+}
+
 function installVSCodeExtensions() {
 	local code_bin="code"
 	if ! command -v code &> /dev/null; then
@@ -98,6 +104,7 @@ function installOhMyZsh() {
 
 function doIt() {
 	mkdir -p "$HOME/Work";
+	setupIterm2;
 	installNode;
 	installVSCodeExtensions;
 	installClaudeCode;
@@ -111,6 +118,7 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "install.sh" \
 		--exclude "macos.sh" \
+		--exclude "iterm2/" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
 	source ~/.zshrc;
