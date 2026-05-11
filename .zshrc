@@ -26,3 +26,9 @@ eval "$(uv generate-shell-completion zsh)"
 
 # go
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+# iTerm2 Natural Text Editing keybindings
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+bindkey "^[^?" backward-delete-word
+bindkey "^[[3;3~" delete-word
